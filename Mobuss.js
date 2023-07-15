@@ -18,7 +18,7 @@ function showDiv(divNumber) {
         divs[i].style.display = "none";
     }
 
-    document.getElementById(divId).style.display = "block";
+    document.getElementById(divId).style.display = "flex";
     currentDiv = divNumber;
 }
 
