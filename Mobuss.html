@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste mobuss</title>
+    <link rel="stylesheet" type="textc/css" href="https://onedrive.live.com/u/s!AuNNm3eTlgu0nCY4_Vs4L-l6l3P2?e=RbK5rm">
+</head>
+<body>
+  <form action="" form="Test">
+   <div id="div-1">
+    <div id="Entry">
+    <span><input type="text" id="nom" name="nome" placeholder="Seu nome" /><br /></span>
+    <button onclick="StartForm()">Continuar</button>
+    </div>
+   </div>
+    <div>
+    <div class="container" id="div1">
+        <h1> Questão 1 </h1>
+       <input type="radio" name="Work" onclick="openModal1()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal1()">Func.10</br>
+
+   
+       <div id="modal1" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal1()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi1" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf1" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI1" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF1" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal1() {
+           var modal = document.getElementById("modal1");
+           modal.style.display = "block";
+   
+           var timeInputI1 = document.getElementById("Hi1");
+           var textInputI1 = document.getElementById("HoraI1");
+           var timeInputF1 = document.getElementById("Hf1");
+           var textInputF1 = document.getElementById("HoraF1");
+   
+           timeInputI1.addEventListener("input", function() {
+               textInputI1.value = timeInputI1.value;
+           });
+   
+           timeInputF1.addEventListener("input", function() {
+               textInputF1.value = timeInputF1.value;
+           });
+       }
+   
+       function closeModal1() {
+           var modal = document.getElementById("modal1");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div2">
+        <h1> Questão 2 </h1>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.1</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.2</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.3</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.4</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.5</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.6</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.7</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.8</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.9</br>
+       <input type="radio" name="Work" onclick="openModal2()">Serv.10</br>
+
+   
+       <div id="modal2" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal2()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi2" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf2" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI2" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF2" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal2() {
+           var modal = document.getElementById("modal2");
+           modal.style.display = "block";
+   
+           var timeInputI2 = document.getElementById("Hi2");
+           var textInputI2 = document.getElementById("HoraI2");
+           var timeInputF2 = document.getElementById("Hf2");
+           var textInputF2 = document.getElementById("HoraF2");
+   
+           timeInputI2.addEventListener("input", function() {
+               textInputI2.value = timeInputI2.value;
+           });
+   
+           timeInputF2.addEventListener("input", function() {
+               textInputF2.value = timeInputF2.value;
+           });
+       }
+   
+       function closeModal2() {
+           var modal = document.getElementById("modal2");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div3">
+        <h1> Questão 3 </h1>
+       <input type="radio" name="Work" onclick="openModal3()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal3()">Func.10</br>
+
+   
+       <div id="modal3" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal3()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi3" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf3" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI3" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF3" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal3() {
+           var modal = document.getElementById("modal3");
+           modal.style.display = "block";
+   
+           var timeInputI3 = document.getElementById("Hi3");
+           var textInputI3 = document.getElementById("HoraI3");
+           var timeInputF3 = document.getElementById("Hf3");
+           var textInputF3 = document.getElementById("HoraF3");
+   
+           timeInputI3.addEventListener("input", function() {
+               textInputI3.value = timeInputI3.value;
+           });
+   
+           timeInputF3.addEventListener("input", function() {
+               textInputF3.value = timeInputF3.value;
+           });
+       }
+   
+       function closeModal3() {
+           var modal = document.getElementById("modal3");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div4">
+        <h1> Questão 4 </h1>
+       <input type="radio" name="Work" onclick="openModal4()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal4()">Func.10</br>
+
+   
+       <div id="modal4" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal4()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi4" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf4" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI4" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF4" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal4() {
+           var modal = document.getElementById("modal4");
+           modal.style.display = "block";
+   
+           var timeInputI4 = document.getElementById("Hi4");
+           var textInputI4 = document.getElementById("HoraI4");
+           var timeInputF4 = document.getElementById("Hf4");
+           var textInputF4 = document.getElementById("HoraF4");
+   
+           timeInputI4.addEventListener("input", function() {
+               textInputI4.value = timeInputI4.value;
+           });
+   
+           timeInputF4.addEventListener("input", function() {
+               textInputF4.value = timeInputF4.value;
+           });
+       }
+   
+       function closeModal4() {
+           var modal = document.getElementById("modal4");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div5">
+        <h1> Questão 5 </h1>
+       <input type="radio" name="Work" onclick="openModal5()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal5()">Func.10</br>
+
+   
+       <div id="modal5" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal5()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI5" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF5" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal5() {
+           var modal = document.getElementById("modal5");
+           modal.style.display = "block";
+   
+           var timeInputI5 = document.getElementById("Hi5");
+           var textInputI5 = document.getElementById("HoraI5");
+           var timeInputF5 = document.getElementById("Hf5");
+           var textInputF5 = document.getElementById("HoraF5");
+   
+           timeInputI5.addEventListener("input", function() {
+               textInputI5.value = timeInputI5.value;
+           });
+   
+           timeInputF5.addEventListener("input", function() {
+               textInputF5.value = timeInputF5.value;
+           });
+       }
+   
+       function closeModal5() {
+           var modal = document.getElementById("modal5");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div6">
+        <h1> Questão 6 </h1>
+       <input type="radio" name="Work" onclick="openModal6()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal6()">Func.10</br>
+
+   
+       <div id="modal6" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal6()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi6" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf6" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI6" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF6" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal6() {
+           var modal = document.getElementById("modal6");
+           modal.style.display = "block";
+   
+           var timeInputI6 = document.getElementById("Hi6");
+           var textInputI6 = document.getElementById("HoraI6");
+           var timeInputF6 = document.getElementById("Hf6");
+           var textInputF6 = document.getElementById("HoraF6");
+   
+           timeInputI6.addEventListener("input", function() {
+               textInputI6.value = timeInputI6.value;
+           });
+   
+           timeInputF6.addEventListener("input", function() {
+               textInputF6.value = timeInputF6.value;
+           });
+       }
+   
+       function closeModal6() {
+           var modal = document.getElementById("modal6");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div7">
+        <h1> Questão 7 </h1>
+       <input type="radio" name="Work" onclick="openModal7()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal7()">Func.10</br>
+
+   
+       <div id="modal7" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal7()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi7" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf7" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI7" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF7" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal7() {
+           var modal = document.getElementById("modal7");
+           modal.style.display = "block";
+   
+           var timeInputI7 = document.getElementById("Hi7");
+           var textInputI7 = document.getElementById("HoraI7");
+           var timeInputF7 = document.getElementById("Hf7");
+           var textInputF7 = document.getElementById("HoraF7");
+   
+           timeInputI7.addEventListener("input", function() {
+               textInputI7.value = timeInputI7.value;
+           });
+   
+           timeInputF7.addEventListener("input", function() {
+               textInputF7.value = timeInputF7.value;
+           });
+       }
+   
+       function closeModal7() {
+           var modal = document.getElementById("modal7");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div8">
+        <h1> Questão 8 </h1>
+       <input type="radio" name="Work" onclick="openModal8()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal8()">Func.10</br>
+
+   
+       <div id="modal8" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal8()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi8" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf8" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI8" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF8" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal8() {
+           var modal = document.getElementById("modal8");
+           modal.style.display = "block";
+   
+           var timeInputI8 = document.getElementById("Hi8");
+           var textInputI8 = document.getElementById("HoraI8");
+           var timeInputF8 = document.getElementById("Hf8");
+           var textInputF8 = document.getElementById("HoraF8");
+   
+           timeInputI8.addEventListener("input", function() {
+               textInputI8.value = timeInputI8.value;
+           });
+   
+           timeInputF8.addEventListener("input", function() {
+               textInputF8.value = timeInputF8.value;
+           });
+       }
+   
+       function closeModal8() {
+           var modal = document.getElementById("modal8");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div9">
+        <h1> Questão 9 </h1>
+       <input type="radio" name="Work" onclick="openModal9()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal9()">Func.10</br>
+
+   
+       <div id="modal9" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal9()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi9" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf9" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI9" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF9" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal9() {
+           var modal = document.getElementById("modal9");
+           modal.style.display = "block";
+   
+           var timeInputI9 = document.getElementById("Hi9");
+           var textInputI9 = document.getElementById("HoraI9");
+           var timeInputF9 = document.getElementById("Hf9");
+           var textInputF9 = document.getElementById("HoraF9");
+   
+           timeInputI9.addEventListener("input", function() {
+               textInputI9.value = timeInputI9.value;
+           });
+   
+           timeInputF9.addEventListener("input", function() {
+               textInputF9.value = timeInputF9.value;
+           });
+       }
+   
+       function closeModal9() {
+           var modal = document.getElementById("modal9");
+           modal.style.display = "none";
+       }
+
+       </script> 
+    
+    </div>
+
+    <div class="container" id="div10">
+        <h1> Questão 10 </h1>
+       <input type="radio" name="Work" onclick="openModal()">Func.1</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.2</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.3</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.4</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.5</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.6</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.7</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.8</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.9</br>
+       <input type="radio" name="Work" onclick="openModal()">Func.10</br>
+
+   
+       <div id="modal" class="modal">
+           <div class="modal-content">
+               <span class="close" onclick="closeModal()">&times;</span>
+                   
+                   <label>Serviço</label>
+                   <select name="entry.97926436" id="Serv" required>
+                       <option value=""></option>
+                       <option value="Locação e execução de gabarito para o radier (BLOCO)">Locação e execução de gabarito para o radier (BLOCO)</option>
+                       <option value="Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)">Regularização do terreno e montagem de fôrma para concreto magro do radier (BLOCO)</option>
+                       <option value="Execução de concreto magro do radier (BLOCO)">Execução de concreto magro do radier (BLOCO)</option>
+                       <option value="Montagem de formas metálicas do radier protendido (BLOCO)">Montagem de formas metálicas do radier protendido (BLOCO)</option>
+                   </select><br /><br />
+   
+                   <label>Início:</label>
+                   <input type="time" id="Hi" name="H_Ini" required />
+   
+                   <label>Fim:</label>
+                   <input type="time" id="Hf" name="H_fi" required /><br /><br />
+   
+                   <label>Local</label>
+                   <select name="entry.1345845723" id="Loc" required>
+                       <option value=""></option>
+                       <option value="Bloco 01">Bloco 01</option>
+                       <option value="Bloco 02">Bloco 02</option>
+                       <option value="Bloco 03">Bloco 03</option>
+                       <option value="Bloco 04">Bloco 04</option>
+                   </select><br/><br/>
+   
+                   <label>Equipamento</label>
+                   <select name="entry.1045632472" id="Equ" required>
+                       <option value=""></option>
+                       <option value="Assistência Técnica">Assistência Técnica</option>
+                       <option value="Checklist Escritório">Checklist Escritório</option>
+                       <option value="Checklist Obra">Checklist Obra</option>
+                       <option value="Incompleto">Incompleto</option>
+                       <option value="Concluído">Concluído</option>
+                       <option value="Retrabalho">Retrabalho</option>
+                       <option value="Vistoria Do Cliente">Vistoria Do Cliente</option>
+                   </select>
+   
+                   <input type="checkbox" id="Ret" name="entry.1199850269" value="Retrabalho" />
+                   <label>Retrabalho</label><br /><br />
+   
+                   <label>Observação</label>
+                   <input type="text" id="Obs" name="entry.1059586723" placeholder="Observação" /><br />
+   
+                   <input type="text" id="HoraI" name="entry.238198411" hidden />
+                   <input type="text" id="HoraF" name="entry.572409028" hidden />
+           </div>
+       </div>
+
+       <script>
+       function openModal() {
+           var modal = document.getElementById("modal");
+           modal.style.display = "block";
+   
+           var timeInputI = document.getElementById("Hi");
+           var textInputI = document.getElementById("HoraI");
+           var timeInputF = document.getElementById("Hf");
+           var textInputF = document.getElementById("HoraF");
+   
+           timeInputI.addEventListener("input", function() {
+               textInputI.value = timeInputI.value;
+           });
+   
+           timeInputF.addEventListener("input", function() {
+               textInputF.value = timeInputF.value;
+           });
+       }
+   
+       function closeModal() {
+           var modal = document.getElementById("modal");
+           modal.style.display = "none";
+       }
+
+       </script> 
+       
+    </div>
+    </div>
+  </form>
+ 
+<br>
+
+    <div id="FormButton" class="FormButton">
+    <button onclick="showPrevious()">Anterior</button>
+    <button type="submit" form="Test">Enviar Apontamento</button>
+    <button onclick="showNext()">Próximo</button>
+    </div>
+
+    <script>
+    var currentDiv = -1;
+    var totalDivs = 10;   // Número de questionários da página
+    var Buttons = document.getElementById("FormButton");
+
+    function showDiv(divNumber) {
+         var divId = "div" + divNumber;
+         var divs = document.getElementsByClassName("container");
+
+         if (currentDiv == -1){
+            FormButton.style.display = "none";
+         };
+         for (var i = 0; i < divs.length; i++) {
+             divs[i].style.display = "none";
+         };
+
+         document.getElementById(divId).style.display = "block";
+         currentDiv = divNumber;
+     }
+
+     function showPrevious() {
+         currentDiv--;
+         if (currentDiv < 1) {
+             currentDiv = totalDivs;
+         }
+         showDiv(currentDiv);
+     }
+
+     function showNext() {
+         currentDiv++;
+         if (currentDiv > totalDivs) {
+             currentDiv = 1;
+         }
+         showDiv(currentDiv);
+     }
+
+     function StartForm(){
+        currentDiv = 1;
+        Buttons.style.display = "block";
+        document.getElementById("div-1").style.display = "none";
+        showDiv(currentDiv);
+     }
+
+     showDiv(currentDiv);
+    </script> 
+</body>
+</html>
