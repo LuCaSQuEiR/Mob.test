@@ -75,3 +75,31 @@
     .container{
         flex-direction: column;
     }
+
+    @media screen and (max-width: 480px) {
+        #Entry{
+            width: 90vw;
+        }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 768px) {
+        #Entry{
+            width: 70vw;
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        #Entry{
+            width: 50vw;
+        }
+    }
+
+    @media screen and (min-width: 1025px) and (max-width: 1280px) {
+        #Entry{
+            width: 40vw;
+        }
+    }
+
+    @media screen and (min-width: 1281px) {
+        /* CSS rules for large desktops and high-resolution displays */
+    }
