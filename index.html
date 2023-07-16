@@ -13,12 +13,16 @@
         <h3>Este é um simulador do aplicativo de Apontamento do sistema mobuss. Você pode verificar suas respostas após pressionar o botão "enviar". caso nada aconteça, verifique se todos os campos estão preenchidos.</h3>
         <div id="User">
         <label for="nome">Usuário:</label>
-        <input type="text" id="nom" name="nome" placeholder="Seu nome" /><br />
+        <input type="text" id="nom" name="nome" placeholder="Seu nome" required /><br />
         </div>
     <button id="StartButton" onclick="StartForm()">Continuar</button>
-    </div>
    </div>
-    <div>
+   </div>
+   <div id="all">
+     <div id="FormButton" class="FormButton">
+        <button onclick="showPrevious()">Anterior</button>
+        <button onclick="showNext()">Próximo</button>
+     </div>
     <div class="container" id="div1">
         <h1> Questão 1 </h1>
        <input type="radio" name="Work" onclick="openModal1()">Func.1</br>
@@ -678,15 +682,9 @@
            </div>
        </div>
     </div>
-    </div>
-  </form>
-<br>
-    <div id="FormButton" class="FormButton">
-    <button onclick="showPrevious()">Anterior</button>
     <button type="submit" form="Test">Enviar Apontamento</button>
-    <button onclick="showNext()">Próximo</button>
-    </div>
-    
+   </div>
+  </form>
   <script type="text/javascript" src="Mobuss.js"></script>
 </body>
 </html>

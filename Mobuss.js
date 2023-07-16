@@ -39,11 +39,13 @@ function showDiv(divNumber) {
  }
 
  function StartForm(){
-    currentDiv = 1;
-    Buttons.style.display = "block";
-    document.getElementById("div-1").style.display = "none";
-    showDiv(currentDiv);
- }
+    if (document.getElementById("nom").value !="") {
+        currentDiv = 1;
+        Buttons.style.display = "flex";
+        document.getElementById("div-1").style.display = "none";
+        showDiv(currentDiv);   
+    }
+}
 
  window.addEventListener("load", function () {
     showDiv(currentDiv);
