@@ -135,8 +135,8 @@
 
     @media screen and (max-height: 480px) and (orientation:landscape) {
         #Entry{
-            height: 65vh;
-            width: 85vw;
+            height: 100vh;
+            width: 100vw;
         }
     }
 
