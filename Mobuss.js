@@ -48,6 +48,9 @@ function showDiv(divNumber) {
 });
 
 function openModal() {
+    document.getElementById("div"+currentDiv).style.display = "none";
+    document.getElementById("FormButton").style.display = "none";
+    document.getElementById("submit").style.display = "none";
     var modalid = 0
     if (currentDiv > 0){
       modalid = currentDiv
@@ -76,4 +79,7 @@ function closeModal() {
     }
     var modal = document.getElementById("modal" + modalid);
     modal.style.display = "none";
+    document.getElementById("FormButton").style.display = "FLex";
+    document.getElementById("submit").style.display = "Block";
+    showDiv(currentDiv);
 }
