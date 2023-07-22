@@ -65,7 +65,7 @@ function openModal() {
       modalid = currentDiv
     }
     var modal = document.getElementById("modal" + modalid);
-    modal.style.display = "block";
+    modal.style.display = "Flex";
 
     var timeInputI1 = document.getElementById("Hi" + modalid);
     var textInputI1 = document.getElementById("HoraI" + modalid);
