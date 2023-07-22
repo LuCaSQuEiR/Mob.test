@@ -1,6 +1,15 @@
 var currentDiv = -1;
-var totalDivs = 10;   // Número de questionários da página
-var Buttons = document.getElementById("FormButton");
+var totalDivs = 10;
+const Buttons = document.getElementById("FormButton");
+const ServInputs = document.querySelectorAll('.Serv');
+const LocInputs = document.querySelectorAll('.Loc');
+const EquInputs = document.querySelectorAll('.Equ');
+const radioButtons = document.querySelectorAll('.menu');
+const columns = document.querySelectorAll('.column');
+let labelText = "HABITAÇÃO";
+let Servid;
+let Locid;
+let Equid;
 
 function showDiv(divNumber) {
     var divId = "div" + divNumber;
@@ -86,10 +95,6 @@ function closeModal() {
 
 //Código menu horizontal (Local)
 
-const radioButtons = document.querySelectorAll('.menu');
-const columns = document.querySelectorAll('.column');
-let labelText = "HABITAÇÃO";
-
 function updateLabelText(text) {
     const innerelement = document.getElementById('seleção');
     innerelement.innerHTML = '<h3>Seleção: ' + text + '</h3>';
@@ -106,7 +111,7 @@ const selectedValue = parseInt(this.value);
         
 const radioid = document.getElementById('optionL'+ selectedValue);
 const label = document.querySelector(`label[for="${radioid.id}"]`);
-labelText = label.textContent; // Update the global labelText variable
+labelText = label.textContent;
 updateLabelText(labelText); 
       
 const selectedElements = [];
@@ -154,3 +159,15 @@ break;
 }
 });
 });
+
+LocInputs.forEach((Loc) => {
+    Loc.addEventListener('click', function() {
+      document.getElementById("ContainerLocal").style.display = "Flex";
+      Locid = document.getElementById(this.id);
+    });
+  });
+
+function SaveLabel(){
+    Locid.value = labelText;
+    document.getElementById("ContainerLocal").style.display = "none";
+}
