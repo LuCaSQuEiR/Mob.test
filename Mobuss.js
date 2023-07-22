@@ -83,3 +83,74 @@ function closeModal() {
     document.getElementById("submit").style.display = "Block";
     showDiv(currentDiv);
 }
+
+//Código menu horizontal (Local)
+
+const radioButtons = document.querySelectorAll('.menu');
+const columns = document.querySelectorAll('.column');
+let labelText = "HABITAÇÃO";
+
+function updateLabelText(text) {
+    const innerelement = document.getElementById('seleção');
+    innerelement.innerHTML = '<h3>Seleção: ' + text + '</h3>';
+}
+
+function setInitialLabelText() {
+    updateLabelText(labelText);
+}
+document.addEventListener('DOMContentLoaded', setInitialLabelText);
+
+radioButtons.forEach((radio) => {
+    radio.addEventListener('change', function () {
+const selectedValue = parseInt(this.value);
+        
+const radioid = document.getElementById('optionL'+ selectedValue);
+const label = document.querySelector(`label[for="${radioid.id}"]`);
+labelText = label.textContent; // Update the global labelText variable
+updateLabelText(labelText); 
+      
+const selectedElements = [];
+const hiddenColumns = [];
+
+switch (true) {
+case (0 < selectedValue && selectedValue < 6):
+columns.forEach((column, index) => {
+  if (index === 0 || index === selectedValue) {
+    selectedElements.push(column);
+  } else {
+    hiddenColumns.push(column);
+  }
+});
+
+selectedElements.forEach((element) => {
+  element.style.display = 'flex';
+});
+
+hiddenColumns.forEach((column) => {
+  column.style.display = 'none';
+});
+break;
+    case (5 < selectedValue && selectedValue < 37):
+columns.forEach((column, index) => {
+  if (index === 0 ||index === 1 || index === selectedValue) {
+    selectedElements.push(column);
+  } else {
+    hiddenColumns.push(column);
+  }
+});
+
+selectedElements.forEach((element) => {
+  element.style.display = 'flex';
+});
+
+hiddenColumns.forEach((column) => {
+  column.style.display = 'none';
+});
+break;
+default:
+
+break;
+
+}
+});
+});
