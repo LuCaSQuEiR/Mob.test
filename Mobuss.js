@@ -135,23 +135,6 @@ hiddenColumns.forEach((column) => {
   column.style.display = 'none';
 });
 break;
-case (26 < selectedValue && selectedValue < 49):
-columns.forEach((column) => {
-  if (index === 0 || index === selectedValue) {
-    selectedElements.push(column);
-  } else {
-    hiddenColumns.push(column);
-  }
-});
-
-selectedElements.forEach((element) => {
-  element.style.display = 'flex';
-});
-
-hiddenColumns.forEach((column) => {
-  column.style.display = 'none';
-});
-break;
     case (5 < selectedValue && selectedValue < 27):
 columns.forEach((column, index) => {
   if (index === 0 ||index === 1 || index === selectedValue) {
@@ -169,6 +152,25 @@ hiddenColumns.forEach((column) => {
   column.style.display = 'none';
 });
 break;
+case (26 < selectedValue && selectedValue < 132):
+  columns.forEach((column, index) => {
+    const PrevColumn = Math.ceil((selectedValue - 26) / 5) + 5;
+    if (index === 0 ||index === 1 || index === PrevColumn || index === selectedValue) {
+      selectedElements.push(column);
+    } else {
+      hiddenColumns.push(column);
+    }
+  });
+  console.log(selectedElements)
+  selectedElements.forEach((element) => {
+    element.style.display = 'flex';
+  });
+  
+  hiddenColumns.forEach((column) => {
+    column.style.display = 'none';
+  });
+  break;
+
 default:
 
 break;
