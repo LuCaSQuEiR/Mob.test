@@ -3,13 +3,14 @@ var totalDivs = 10;
 const Buttons = document.getElementById("FormButton");
 const ServInputs = document.querySelectorAll('.Serv');
 const LocInputs = document.querySelectorAll('.Loc');
-const EquInputs = document.querySelectorAll('.Equ');
-const radioButtons = document.querySelectorAll('.menu');
-const columns = document.querySelectorAll('.column');
-let labelText = "HABITAÇÃO";
+const radioButtonsL = document.querySelectorAll('.menuL');
+const radioButtonsS = document.querySelectorAll('.menuS');
+const columnsL = document.querySelectorAll('.columnL');
+const columnsS = document.querySelectorAll('.columnS');
+let labelTextL = "HABITAÇÃO";
+let labelTextS = "HABITAÇÃO";
 let Servid;
 let Locid;
-let Equid;
 
 function showDiv(divNumber) {
     var divId = "div" + divNumber;
@@ -95,31 +96,42 @@ function closeModal() {
 
 //Código menu horizontal (Local)
 
-function updateLabelText(text) {
-    const innerelement = document.getElementById('seleção');
+function updateLabelTextS(text) {
+  const innerelement = document.getElementById('seleçãoS');
+  innerelement.innerHTML = '<h3>Seleção: ' + text + '</h3>';
+}
+
+function updateLabelTextL(text) {
+    const innerelement = document.getElementById('seleçãoL');
     innerelement.innerHTML = '<h3>Seleção: ' + text + '</h3>';
 }
 
-function setInitialLabelText() {
-    updateLabelText(labelText);
+function setInitialLabelTextS() {
+    updateLabelTextS(labelTextS);
 }
-document.addEventListener('DOMContentLoaded', setInitialLabelText);
 
-radioButtons.forEach((radio) => {
+function setInitialLabelTextL() {
+  updateLabelTextL(labelTextL);
+}
+
+document.addEventListener('DOMContentLoaded', setInitialLabelTextS);
+document.addEventListener('DOMContentLoaded', setInitialLabelTextL);
+
+radioButtonsS.forEach((radio) => {
     radio.addEventListener('change', function () {
 const selectedValue = parseInt(this.value);
 const selectedId = this.id;
         
 const label = document.querySelector(`label[for="${selectedId}"]`);
-labelText = label.textContent;
-updateLabelText(labelText); 
+labelTextS = label.textContent;
+updateLabelTextS(labelTextS); 
       
 const selectedElements = [];
 const hiddenColumns = [];
 
 switch (true) {
 case (0 < selectedValue && selectedValue < 6):
-columns.forEach((column, index) => {
+columnsS.forEach((column, index) => {
   if (index === 0 || index === selectedValue) {
     selectedElements.push(column);
   } else {
@@ -136,7 +148,7 @@ hiddenColumns.forEach((column) => {
 });
 break;
     case (5 < selectedValue && selectedValue < 27):
-columns.forEach((column, index) => {
+columnsS.forEach((column, index) => {
   if (index === 0 ||index === 1 || index === selectedValue) {
     selectedElements.push(column);
   } else {
@@ -153,7 +165,7 @@ hiddenColumns.forEach((column) => {
 });
 break;
 case (26 < selectedValue && selectedValue < 132):
-  columns.forEach((column, index) => {
+  columnsS.forEach((column, index) => {
     const PrevColumn = Math.ceil((selectedValue - 26) / 5) + 5;
     if (index === 0 ||index === 1 || index === PrevColumn || index === selectedValue) {
       selectedElements.push(column);
@@ -179,14 +191,101 @@ break;
 });
 });
 
-LocInputs.forEach((Loc) => {
-    Loc.addEventListener('click', function() {
-      document.getElementById("ContainerLocal").style.display = "Flex";
-      Locid = document.getElementById(this.id);
-    });
-  });
+radioButtonsL.forEach((radio) => {
+  radio.addEventListener('change', function () {
+const selectedValue = parseInt(this.value);
+const selectedId = this.id;
+      
+const label = document.querySelector(`label[for="${selectedId}"]`);
+labelTextL = label.textContent;
+updateLabelTextL(labelTextL); 
+    
+const selectedElements = [];
+const hiddenColumns = [];
 
-function SaveLabel(){
-    Locid.value = labelText;
-    document.getElementById("ContainerLocal").style.display = "none";
+switch (true) {
+case (0 < selectedValue && selectedValue < 6):
+columnsL.forEach((column, index) => {
+if (index === 0 || index === selectedValue) {
+  selectedElements.push(column);
+} else {
+  hiddenColumns.push(column);
 }
+});
+
+selectedElements.forEach((element) => {
+element.style.display = 'flex';
+});
+
+hiddenColumns.forEach((column) => {
+column.style.display = 'none';
+});
+break;
+  case (5 < selectedValue && selectedValue < 27):
+columnsL.forEach((column, index) => {
+if (index === 0 ||index === 1 || index === selectedValue) {
+  selectedElements.push(column);
+} else {
+  hiddenColumns.push(column);
+}
+});
+
+selectedElements.forEach((element) => {
+element.style.display = 'flex';
+});
+
+hiddenColumns.forEach((column) => {
+column.style.display = 'none';
+});
+break;
+case (26 < selectedValue && selectedValue < 132):
+columnsL.forEach((column, index) => {
+  const PrevColumn = Math.ceil((selectedValue - 26) / 5) + 5;
+  if (index === 0 ||index === 1 || index === PrevColumn || index === selectedValue) {
+    selectedElements.push(column);
+  } else {
+    hiddenColumns.push(column);
+  }
+});
+console.log(selectedElements)
+selectedElements.forEach((element) => {
+  element.style.display = 'flex';
+});
+
+hiddenColumns.forEach((column) => {
+  column.style.display = 'none';
+});
+break;
+
+default:
+
+break;
+
+}
+});
+});
+
+
+ServInputs.forEach((Serv) => {
+  Serv.addEventListener('click', function() {
+    document.getElementById("ContainerServ").style.display = "Flex";
+    Servid = document.getElementById(this.id);
+  });
+});
+
+function SaveLabelS(){
+  Servid.value = labelTextS;
+  document.getElementById("ContainerServ").style.display = "none";
+};
+
+LocInputs.forEach((Loc) => {
+  Loc.addEventListener('click', function() {
+    document.getElementById("ContainerLocal").style.display = "Flex";
+    Locid = document.getElementById(this.id);
+  });
+});
+
+function SaveLabelL(){
+  Locid.value = labelTextL;
+  document.getElementById("ContainerLocal").style.display = "none";
+};
