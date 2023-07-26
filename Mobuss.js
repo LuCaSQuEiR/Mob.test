@@ -108,9 +108,9 @@ document.addEventListener('DOMContentLoaded', setInitialLabelText);
 radioButtons.forEach((radio) => {
     radio.addEventListener('change', function () {
 const selectedValue = parseInt(this.value);
+const selectedId = this.id;
         
-const radioid = document.getElementById('optionL'+ selectedValue);
-const label = document.querySelector(`label[for="${radioid.id}"]`);
+const label = document.querySelector(`label[for="${selectedId}"]`);
 labelText = label.textContent;
 updateLabelText(labelText); 
       
